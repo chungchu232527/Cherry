@@ -1,0 +1,31 @@
+{
+    "language": "vi_VN",
+    "prefix": "❤",
+    "enableServer": false,
+    "devMode": false,
+    "testMode": false,
+    "allowInbox": true,
+    "admin": [
+        "userID 1",
+        "userID 2"
+    ],
+    "cookies": {
+        "autoSave": true,
+        "encrypt": false
+    },
+    "autoUpdate": true,
+    "email": "your facebook email",
+    "password": "your facebook password",
+    "loginOptions": {
+        "selfListen": true,
+        "selfListenEvents": true,
+        "listenEvents": true,
+        "listenTyping": false,
+        "updatePresence": true,
+        "readReceipt": false,
+        "autoMarkRead": false,
+        "onlineStatus": false,
+        "emitReady": true,
+        "autoReconnect": true
+    }
+}

@@ -1,0 +1,157 @@
+{
+    "system": {
+        "languageSelected": "Selected language: %1. You can change in '%2'",
+        "notFoundRegion": "Region %1 does not exists in language %2",
+        "notFoundKey": "Can't found %1 in region %2 of language %3",
+        "cookieChecking": "Checking cookies file....",
+        "encryptCookies": "Enter key do encrypt cookies, skip if you don't want encryption: ",
+        "decryptCookies": "Enter key to decrypt cookies: ",
+        "startServer": "Creating sever...",
+        "serverStarted": "Server has been active with port: %1 (e.g: https://localhost:%1)",
+        "wrongType": "%1 Must be %2.",
+        "doesNotExist": "%1 have ID %2 doesn't exist in the database.",
+        "loadingModule": "Carrying out load modules necessary...",
+        "moduleError": "Have an error when loading modules %1: %2.",
+        "undefinedName": "Modules %1 unnamed.",
+        "wrongModuleFormat": "Module %1 was written wrong Format.",
+        "installLib": "Installation is in progress %1 for module %2",
+        "completeLoading": "Install success %1/%2 module on %3ms.",
+        "getSuperBanData": "Getting SuperBan list...",
+        "errorGetSuperBanData": "An error occurred while retrieving the SuperBan list from the server, please restart the Bot...",
+        "user": "User",
+        "thread": "Thread",
+        "SuperBan": "%1 has ID %2 was been banned by ADMIN of Cherry Project.",
+        "normalBanned": "%1 has ID %2 has been banned by admin group.",
+        "commandNotFound": "Commandnotfond, press \"%1help\" to see all Command list.",
+        "testModeEnable": "TestMode is on, only BotManager can use on this time.",
+        "errorMessage": "An error occurred at: %1\nDetails:\n%2",
+        "calcTimeString": "%1 year %2 month %3 day %4 hour %5 minute %6 second %7ms",
+        "male": "Male",
+        "female": "Female",
+        "callCommands": "Command Execution: %1 | Caller: %2 | Group ID: %3 | Execution Time: %4ms"
+    },
+    "help": {
+        "description": "See the list and instructions for using the command.",
+        "category": "System",
+        "guide": [
+            "<p> [empty/command name]",
+            "<ex> <randomCmd>"
+        ],
+        "Cherry": "●───── Cherry Bot ─────●\n",
+        "emptyPage": "The page you entered has no commands, please check and try again.",
+        "commandInfo": "Command Name: %1.\n📜 nDescription: %2.\n⏳ Cooldown: %3 s/user.\n✊ Permissions: %4\n📄 Guide: %5\n",
+        "commandInPage": "%1. Command Name: %2\nDescription: %3%4",
+        "footerPage": "%1📜 Page: %2/%3\n🍀 There are %4 commands available.\n%1➴ Send %5help [page number] to see the list of commands on that page.\n➴ Send %5help [command name] for details on how to use the command.",
+        "author": "© Author: ",
+        "notFoundGuides": "The instructions for this command could not be found.",
+        "permissions": [
+            "User and Up",
+            "Admin and Bot Manager",
+            "Only Bot Manager"
+        ],
+        "viewPrefix": "💖 Group Prefix: %1\n💖 Default Prefix: %2",
+        "example": "Example: %1",
+        "unknowPrefix": "Not booked yet.",
+        "notFoundDescription": "Description Not Found.",
+        "default": "Default"
+    },
+    "load": {
+        "description": "Reload commands, configs, events",
+        "category": "System",
+        "guide": [
+            "<p> [empty/command name]",
+            "<ex> <randomCmd>"
+        ],
+        "reloadConfig": "Loaded the configs file successfully within %1ms.",
+        "reloadAll": "Successfully full system refresh in %1ms."
+    },
+    "info": {
+        "description": "See Bot information, user, group.",
+        "category": "Tools",
+        "guide": [
+            "<p> [empty/user/thread] [user (tag/ID) | thread (all)]",
+            "<ex> thread all"
+        ],
+        "userTemplate": "<3 %1 <3\n\nName: %1\nSex: %2\nRelationship: %3\nProfile: https://www.facebook.com/%4\n\n",
+        "alone": "Alone",
+        "dating": "Dating",
+        "threadTemplate": "<3 %1 <3\nGroup Name: %1\nEmoji: %2\nMembers: %3/%4 user\nTotal Message: %5\nADMIN: %6 người\nInvite Link: %7\nCreate Time: %8\n\n",
+        "default": "Default",
+        "os": "======= Server Infomations =======\nServer Name: %1\nChip: %2\nProcessing speed: %3MHz\n\nMemories: %4\nUsed: %5\n",
+        "Cherry": "======= Cherry Infomations =======\nStart Active: %1.\nActive Time: %2\n\nGroup In Database: %3 nhóm.\nUser In Database: %4 người.\nTotal Command: %5\n\nDefault Prefix: %6\nGroup Prefix: %7\n\n%8\nAvaiable Language: %9 language\nPing: %10ms",
+        "disable": "Disable"
+    },
+    "ytb": {
+        "description": "Search and download youtube video",
+        "category": "Tools",
+        "guide": [
+            "<p> [video/audio] [maxSearchValue (Default is 5)] [query]",
+            "<ex> audio send it"
+        ],
+        "needFirstArguments": "You have used wrong format command, Send \"%1help %2\" to see the command guide.",
+        "sendSearchList": "This is the list I found from the keyword you give:\n\n%1\nReply this message with the Content you want.",
+        "isNotANumber": "Your choice must be a number and is larger than 0.",
+        "oversized": "The file you chose is oversize please chose another file.",
+        "author": "Author: %1",
+        "length": "Length: %1",
+        "view": "View: %1"
+    },
+    "language": {
+        "description": "See, change the language system",
+        "category": "System",
+        "guide": [
+            "<p>"
+        ],
+        "select": "On this is language usable on Bot:\n\n%1\nReply this message with the number you want.",
+        "isNumber": "Your choice must be a number and positive integer.",
+        "isAuthor": "You are not the author.",
+        "notInTheList": "Your choice is not on the list",
+        "accept": "Have you sure that you want to change the language to\"%1\"?\nReact this message to confirm.",
+        "success": "Language has been changed to %1.",
+        "reload": "Restard language success on time %1ms."
+    },
+    "admin": {
+        "description": "See, Add, remove BotManager",
+        "category": "System",
+        "guide": [
+            "<p> [list/add/remove] [add (ids/tag) | remove (ids/tag)]",
+            "<ex> add 100005548624106"
+        ],
+        "error": "You have used the wrong format command, send \"%1help %2\" to see the command guide.",
+        "list": "List of BotManager:\n\n%1",
+        "Added": "Added admin success.",
+        "removed": "Removed admin success.",
+        "removeList": "On this list is the user you can remove from Admin list:\n\n%1\n\nReply this message with the number Corresponding with the user you want to remove from the list. ",
+        "notFoundItem": "The option you give or identify or not on the list.",
+        "notTheAuthor": "Shut the fuck up"
+    },
+    "setname": {
+        "description": "Change your nickname or the user you tagged",
+        "category": "Tools",
+        "guide": [
+            "<p> [name/me/tag] [tag (name)]",
+            "<ex> Test",
+            "<ex> @Henry Test"
+        ]
+    },
+    "eval": {
+        "description": "Run code directly",
+        "category": "Tools",
+        "guide": ["<p> console.log('Hello, I'm Cherry!');", "<p> api.sendMessage('Hello, I'm Cherry', event.threadID, event.messageID);"],
+        "WaitForConfirmation": "Please wait for the Administrator to confirm to execute the script by dropping an emoticon in this message (Drop the angry '😠' to cancel - may not drop)",
+        "accepted": "The Manager has successfully confirmed, executing the code...",
+        "denied": "Administrator denied, code aborted/not executed.",
+        "finishExecute": "The code has been executed completely.",
+        "errorExecute": "An error occurred while executing your code\nDetails:\n%1"
+    },
+    "updateGroupData": {
+        "refreshed": "The group's data has been refreshed."
+    },
+    "testmode": {
+        "description": "Enable/Disable TestMode",
+        "category": "Tools",
+        "guide": ["<p>"],
+        "enabled": "TestMode enabled, only Managers can use the Bot.",
+        "disabled": "TestMode has been disabled, everyone can use the Bot normally."
+    }
+}

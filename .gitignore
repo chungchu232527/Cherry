@@ -1,0 +1,7 @@
+.gitattributes
+node_modules
+package-lock.json
+/scripts/commands/cache
+/scripts/events/cache
+/system/database/data
+cookies.json

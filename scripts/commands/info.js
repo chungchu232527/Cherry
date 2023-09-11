@@ -12,7 +12,7 @@ module.exports = class {
         this.countdown = 5;
     }
     async execute({ api, args, event, Cherry, Threads, Users, Language, utils }) {
-        var { threadID, senderID, messageID, mentions, isGroup, timestamp } = event, msg = '', { allowInbox } = Cherry.configs;
+        var { threadID, senderID, messageID, mentions, timestamp } = event, msg = '';
         switch (args[0]) {
             case 'user':
             case '-u': {
@@ -40,11 +40,9 @@ module.exports = class {
                         }
                     }
                 } else {
-                    if (allowInbox || isGroup) {
-                        var thread = await Threads.get(threadID), { participantIDs } = await Threads.getInfo(threadID);
-                        var createTime = utils.getTimeFromTimestamp(thread.createTime).timeString;
-                        msg += Language(this.name, 'threadTemplate', thread.name || threadID, thread.emoji || Language(this.name, 'default'), Object.keys(thread.members).length, participantIDs.length, thread.totalMsg, thread.adminIDs.length, info?.inviteLink?.enable ? info.inviteLink.link : Language(this.name, 'disable'), createTime);
-                    }
+                    var thread = await Threads.get(threadID), { participantIDs } = await Threads.getInfo(threadID);
+                    var createTime = utils.getTimeFromTimestamp(thread.createTime).timeString;
+                    msg += Language(this.name, 'threadTemplate', thread.name || threadID, thread.emoji || Language(this.name, 'default'), Object.keys(thread.members).length, participantIDs.length, thread.totalMsg, thread.adminIDs.length, info?.inviteLink?.enable ? info.inviteLink.link : Language(this.name, 'disable'), createTime);
                 }
                 return api.sendMessage(msg, threadID, messageID);
             }

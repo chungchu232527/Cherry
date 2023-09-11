@@ -11,34 +11,11 @@ module.exports = class {
         this.permission = 2;
         this.countdown = 5;
     }
-    async execute({ api, event, Cherry, args, Language, utils, log, Users, Threads }) {
-        var { threadID, messageID } = event, type = args.shift();
-        switch (type) {
-            case 'commands':
-            case 'command':
-            case '-c': {
-                var { success, error, executeTime } = Cherry.loader('commands', false, args);
-                return api.sendMessage(Language('system', 'completeLoading', success, success + error, executeTime), threadID, messageID);
-            }
-            case 'events':
-            case 'event':
-            case '-e': {
-                var { success, error, executeTime } = Cherry.loader('events', false, args);
-                return api.sendMessage(Language('system', 'completeLoading', success, success + error, executeTime), threadID, messageID);
-            }
-            case 'configs':
-            case 'config':
-            case '-cfg': {
-                var { executeTime } = Cherry.loader('-cfg', false);
-                return api.sendMessage(Language(this.name, 'reloadConfig', executeTime), threadID, messageID);
-            }
-            case 'all':
-            case '-a':
-            default: {
-                var startLoading = Date.now();
-                var { success, error, executeTime } = Cherry.loader('-a', false);
-                return api.sendMessage(Language(this.name, 'reloadAll', success, success + error, (Date.now() - startLoading) + executeTime), threadID, messageID);
-            }
-        }
+    async execute({ api, event, Cherry, args, Language }) {
+        var { threadID, messageID } = event, type = args.shift(), startLoading = Date.now();
+        var langType = /commands?|-c|events?|-e/g.test(type) ? 'completeLoading' : /configs?|-cfg|/g.test(type) ? 'reloadConfig' : 'reloadAll', region = /commands?|-c|events?|-e/g.test(type) ? 'system' : this.name;
+        var { success, error, executeTime } = Cherry.loader(type, false, args);
+        var msg = langType === 'reloadConfig' ? Language(region, langType, executeTime) : Language(region, langType, success, success + error, (Date.now() - startLoading) + executeTime);
+        return api.sendMessage(msg, threadID, messageID);
     }
 }
